@@ -7,6 +7,7 @@ date: "2025-09-08"
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+# Sarah Bowker
 
 ## R Markdown
 
@@ -27,3 +28,18 @@ plot(pressure)
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+```{r vegan, eval=FALSE}
+install.packages("vegan")
+```
+
+ggplot2 will now be installed.  After it is installed a scatter plot will be made from the cars dataset.
+
+```{r ggplot2, echo = FALSE}
+install.packages("ggplot2", repos = "https://cran.rstudio.com/")
+```
+
+```{r scatterplot, echo = FALSE}
+library(ggplot2)
+ggplot(cars, aes(x = speed, y = dist)) + geom_point()
+```
